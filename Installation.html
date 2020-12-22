@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>welcome to my website</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- 导航 -->
+	<div class="manue">
+		<!-- 导航文字 -->
+		<div id="" class="line">
+
+		</div>
+		<div id="" class="nav">
+
+			<div id="" class="logo">
+				Jiaxin Li
+			</div>
+
+			<ul class="toptab">
+				<li><a class="index" href="./index.html">Home</a></li>
+				<li><a class="MyData person" href="./MyData.html">MyData</a></li>
+				<li><a class="Project work" href="./ProjectWork.html">ProjectWork</a></li>
+				<li><a class="Installation" href="./Installation.html">Installation</a></li>
+				<li><a class="Augmentation" href="./Augmentation.html">Augmentation</a></li>
+				<li><a class="Scenarios" href="./Scenarios.html">Scenarios</a></li>
+				<li><a class="5in5" href="./5in5.html">5in5</a></li>
+				<li><a class="Projects" href="./Projects.html">Projects</a></li>
+				<li><a class="fall" href="./fall.html">fall</a></li>
+				
+			</ul>
+		</div>
+		<div id="" class="wenzi ">
+			<p>Welcome to my personal website</p>
+			<a href="javascript:;" class="view">VIEW MY INFORMATION</a>
+
+		</div>
+
+
+
+	</div>
+		<!-- Installation sets for strangers -->
+		<div class="conbox" id="Installation">
+			<h2>Installation</h2>
+			<h5>Installation sets for strangers</h5>
+			<p class="tit">
+				Prototype 1
+			</p>
+			<p class="desc">
+				I chosen Common area of 90 columbus (New Jersey) as the location of my sets because it is a reletaively a more “secret space”. In first week, I only focused on finding a “public space” but forget to think about more details for future implementations.By chosing this place, I was quite pride that our group is the only one who didn’t chose a totally public place. But I seem so wrong by looking back now.the restriction accessibility of people in this area represents less interaction possibility between people and our instruction sets.
+			</p>
+			<div class="pngbox">
+				<div class="png">
+					<img src="./img/common_plate1.jpg" alt="">
+				</div>
+				<div class="png">
+					<img src="./img/common_plate3.jpg" alt="">
+				</div>
+			</div>
+			<p class="tit">
+				Prototype 2
+			</p>
+			<p class="desc">
+				This time, after lot’s of research and observations. I have chosen Medison Square Park as the location to set up my installation. Here is a park that is not too big, just taking 1 block in the downtown Manhattan. Lots of people traveling by and is a little place for relaxing in this busy city.
+			</p>
+			<img class="conpng" src="./img/p2.png" alt="">
+			<p class="tit">
+				Prototype 3
+			</p>
+			<p class="desc">at last, because we were running out of time, we have to give up all our ideas and just using color spray to do a painting in our ballons.</p>
+			<p class="desc">On-site is always having some differentiation with imagination, result would be much better if stick in one idea for three weeks. Also, I learned a lot about how to deal with group work. I almost never had large group work project before, and I got lots of experiences this time. Group works is quite different individual work, communication is really the key to deliver a success work!</p>
+		</div>
+	<script>
+		$('.toptab a').on('click', function () {
+			if ($(this).hasClass('person')) {
+				scrolls($('#person'))
+			} else if ($(this).hasClass('work')) {
+				scrolls($('#work'))
+			} else if ($(this).hasClass('Installation')) {
+				scrolls($('#Installation'))
+			} else if ($(this).hasClass('Augmentation')) {
+				scrolls($('#Augmentation'))
+			} else if ($(this).hasClass('Scenarios')) {
+				scrolls($('#Scenarios'))
+			} else if ($(this).hasClass('5in5')) {
+				scrolls($('#5in5'))
+			} else if ($(this).hasClass('Project')) {
+				scrolls($('#Project'))
+			} else if ($(this).hasClass('fall')) {
+				scrolls($('#fall'))
+			} else if ($(this).hasClass('linkus')) {
+				scrolls($('#linkus'))
+			}
+		})
+		$('.view').on('click', function () {
+			scrolls($('#person'))
+		})
+
+		function scrolls(dom) {
+			var aim = dom.offset().top;
+			$('html,body').animate({
+				scrollTop: aim
+			}, 1000);
+			console.log(aim)
+		}
+	</script>
+</body>
+</html>

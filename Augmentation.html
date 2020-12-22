@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>welcome to my website</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<!-- 导航 -->
+	<div class="manue">
+		<!-- 导航文字 -->
+		<div id="" class="line">
+
+		</div>
+		<div id="" class="nav">
+
+			<div id="" class="logo">
+				Jiaxin Li
+			</div>
+
+			<ul class="toptab">
+				<li><a class="index" href="./index.html">Home</a></li>
+				<li><a class="MyData person" href="./MyData.html">MyData</a></li>
+				<li><a class="Project work" href="./ProjectWork.html">ProjectWork</a></li>
+				<li><a class="Installation" href="./Installation.html">Installation</a></li>
+				<li><a class="Augmentation" href="./Augmentation.html">Augmentation</a></li>
+				<li><a class="Scenarios" href="./Scenarios.html">Scenarios</a></li>
+				<li><a class="5in5" href="./5in5.html">5in5</a></li>
+				<li><a class="Projects" href="./Projects.html">Projects</a></li>
+				<li><a class="fall" href="./fall.html">fall</a></li>
+				
+			</ul>
+		</div>
+		<div id="" class="wenzi ">
+			<p>Welcome to my personal website</p>
+			<a href="javascript:;" class="view">VIEW MY INFORMATION</a>
+
+		</div>
+
+
+	</div>
+		<!-- Augmentation -->
+		<div class="conbox" id="Augmentation">
+			<h2>Augmentation</h2>
+			<p class="desc">
+				What is augmentation? and what kind of impact it brings to our life or even our future? what “augment” means in the human experience? I am going to do one semester-long project to explore it.I will work out various definitions and elaborate on this prompt.*
+			</p>
+			<div class="png3">
+				<div class="png">
+					<img src="./img/original.jpg" alt="">
+				</div>
+				<div class="png">
+					<img src="./img/filtered1.jpg" alt="">
+				</div>
+				<div class="png">
+					<img src="./img/filtered2.jpg" alt="">
+				</div>
+			</div>
+			<p class="desc">This is a wearable sculture, you can easily fit it in any of your fingers and it’s convenient to adjust the size. The whole sculpture represents education. It can be divided into three parts: the first part is the connection part with fingers. The right to chose being educated or not, which field to study, what diploma to get is always hold in your hand. The second part is in the middle. It looks quite messy and clueless, exactly looks like what we learn in primary educations — we learn a lot of stuff a little bit from almost all study fields. The third and last part is the spiral part. It represents our higher educations. in this period, we find out one thing that we love to explore and keep learning in that field. There is a word in Chinese “钻研”, which means “dig in” in a specific study field. I think if there is any chance to visualize this word, what it looks like must be the third part of my sculpture.</p>	
+			<p class="desc">Also, As you can easily move your finger to make the vertex point to wherever you want to point to, just like you can explore whatever area you want to.</p>
+		</div>
+	<script>
+		$('.toptab a').on('click', function () {
+			if ($(this).hasClass('person')) {
+				scrolls($('#person'))
+			} else if ($(this).hasClass('work')) {
+				scrolls($('#work'))
+			} else if ($(this).hasClass('Installation')) {
+				scrolls($('#Installation'))
+			} else if ($(this).hasClass('Augmentation')) {
+				scrolls($('#Augmentation'))
+			} else if ($(this).hasClass('Scenarios')) {
+				scrolls($('#Scenarios'))
+			} else if ($(this).hasClass('5in5')) {
+				scrolls($('#5in5'))
+			} else if ($(this).hasClass('Project')) {
+				scrolls($('#Project'))
+			} else if ($(this).hasClass('fall')) {
+				scrolls($('#fall'))
+			} else if ($(this).hasClass('linkus')) {
+				scrolls($('#linkus'))
+			}
+		})
+		$('.view').on('click', function () {
+			scrolls($('#person'))
+		})
+
+		function scrolls(dom) {
+			var aim = dom.offset().top;
+			$('html,body').animate({
+				scrollTop: aim
+			}, 1000);
+			console.log(aim)
+		}
+	</script>
+</body>
+</html>
